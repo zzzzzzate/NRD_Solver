@@ -63,7 +63,7 @@ xlabel('\theta (rad)'); ylabel('r_{eff} \propto \psi^{1/2}');
 
 % 1. 绘制庞加莱背景 (灰色点)
 if ~isempty(theta_back)
-    plot(theta_back, r_back, '.', 'MarkerSize', 2);
+    plot(theta_back, r_back,'.', 'Color', [0.5 0.5 0.5], 'MarkerSize', 2);
 end
 
 % 2. 绘制 QFM 曲面
