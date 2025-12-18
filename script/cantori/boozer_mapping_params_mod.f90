@@ -1,7 +1,7 @@
-! map_params_mod.f90
+! boozer_mapping_params_mod.f90
 ! inlcude: Boozer_nonresonant_divertor_mapping 
 ! inlcude: derevative functions
-module map_params_mod
+module boozer_mapping_params_mod
     use precision_mod
     implicit none
     
@@ -10,7 +10,7 @@ module map_params_mod
         real(dp) :: eps0 = 0.5_dp
         real(dp) :: eps_t = 0.5_dp
         real(dp) :: eps_x = -0.31_dp
-        real(dp) :: u_psi = 0.0_dp  ! 这就是 QFM 理论中的 nu 参数
+        real(dp) :: nu = 0.0_dp  ! QFM 理论中的 nu 参数
         real(dp) :: psi_g = 1.0_dp  ! 归一化因子
         integer  :: n_dzet_steps = 3600
         real(dp) :: dzet
@@ -161,4 +161,4 @@ contains
         val = t2 + t3
     end function d2H_dpsi2
 
-end module map_params_mod
+end module boozer_mapping_params_mod
